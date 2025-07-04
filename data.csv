@@ -1,0 +1,40 @@
+import pandas as pd
+
+# Dummy dataset: Data Analyst job listings
+data = {
+    "Title": [
+        "Data Analyst", "Junior Analyst", "Senior Data Analyst", "Business Analyst",
+        "Data Scientist", "Power BI Analyst", "SQL Analyst", "Reporting Analyst",
+        "Analytics Specialist", "Market Analyst"
+    ] * 2,
+
+    "Company": [
+        "Google", "Amazon", "Infosys", "TCS", "Deloitte", "Capgemini", "Accenture",
+        "Cognizant", "Wipro", "IBM"
+    ] * 2,
+
+    "Location": [
+        "Bangalore", "Hyderabad", "Pune", "Mumbai", "Chennai", "Delhi", "Kolkata",
+        "Noida", "Gurgaon", "Remote"
+    ] * 2,
+
+    "Summary": [
+        "Looking for SQL and Python skills.",
+        "Experience with Excel and Power BI preferred.",
+        "Strong analytical skills and data visualization.",
+        "Ability to work with large datasets and present insights.",
+        "Python, SQL, and machine learning basics needed.",
+        "Familiarity with Tableau and Power BI dashboards.",
+        "Data modeling, cleaning and transformation experience.",
+        "Problem-solving mindset and statistical understanding.",
+        "Exposure to cloud data platforms is a plus.",
+        "Team player with a good grasp of business metrics."
+    ] * 2
+}
+
+df = pd.DataFrame(data)
+
+# Save the file
+df.to_csv("unbelievable_data_analyst_jobs.csv", index=False)
+
+print("✅ Dummy job dataset saved as 'unbelievable_data_analyst_jobs.csv'")
